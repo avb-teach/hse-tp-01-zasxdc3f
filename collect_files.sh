@@ -16,7 +16,7 @@ OUTPUT_DIR="$3"
 if [ -n "$MAX_DEPTH" ]; then
   PATHS=$(find "$INPUT_DIR" -maxdepth "$MAX_DEPTH" -type f)
 else
-  PATHS=$(find "$INPUT_DIR" -type -f)
+  PATHS=$(find "$INPUT_DIR" -type f)
 fi
 
 for FILE in $PATHS
