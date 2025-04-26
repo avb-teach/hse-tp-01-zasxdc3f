@@ -23,7 +23,7 @@ if [ -n "$MAX_DEPTH" ]; then
     fi
   done
   while true; do
-    DIRS=$(find "$OUTPUT_DIR" -mindepth $((MAX_DEPTH+1)) -maxdepth $((MAX_DEPTH+1)) -type d)
+    DIRS=$(find "$OUTPUT_DIR" -mindepth "$MAX_DEPTH" -maxdepth "$MAX_DEPTH" -type d)
     if [ "${DIRS}" == '' ]; then break; fi
     for DIR in $DIRS; do
       DIR=${DIR#"$OUTPUT_DIR/"}
